@@ -13,7 +13,7 @@ public class AppConfig {
     @Bean
     public CustomScopeConfigurer scopeConfigurer(FiveMinScope fiveMinScope) {
         CustomScopeConfigurer customScopeConfigurer = new CustomScopeConfigurer();
-        customScopeConfigurer.addScope("fiveMinScope", fiveMinScope);
+//        customScopeConfigurer.addScope("fiveMinScope", fiveMinScope);
         return customScopeConfigurer;
     }
 }
