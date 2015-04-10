@@ -1,1 +1,0 @@
-INSERT INTO guest(name, city) VALUES('${guest.login!"def"}','${guest.city!"def"}');

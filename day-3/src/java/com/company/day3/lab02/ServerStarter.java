@@ -1,10 +1,9 @@
-package com.company.day3.lab01;
+package com.company.day3.lab02;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ServerStarter {
-
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ServerAppConfig.class);
+        AnnotationConfigApplicationContext contextServer = new AnnotationConfigApplicationContext(ServerAppConfig.class);
     }
 }
