@@ -17,7 +17,7 @@ public class EventRegistrationTest {
     @Test
     public void registrationAndFindAllTest(){
         eventService.run();
-        String name = "Dasha";
+        String name = "Alexander";
         eventService.registration(name);
         Guest guest = eventService.findGuestByName(name);
         Assert.assertEquals(name, guest.getName());

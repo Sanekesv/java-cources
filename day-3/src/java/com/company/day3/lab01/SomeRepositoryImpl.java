@@ -35,14 +35,13 @@ public class SomeRepositoryImpl implements SomeRepository {
 
         String query = "SELECT * FROM EVENT WHERE ID = ?";
         jdbcTemplate = new JdbcTemplate(dataSource);
-        return null;
-//        return jdbcTemplate.queryForObject(
-//                query, new Object[]{id}, (rs, rowNum) -> {
-//                    Event event1 = new Event();
-//                    event1.setId(rs.getLong("ID"));
-//                    event1.setName(rs.getString("E_NAME"));
-//                    return event1;
-//                });
+        return jdbcTemplate.queryForObject(
+                query, new Object[]{id}, (rs, rowNum) -> {
+                    Event event1 = new Event();
+                    event1.setId(rs.getLong("ID"));
+                    event1.setName(rs.getString("E_NAME"));
+                    return event1;
+                });
     }
 
     @Override
@@ -73,14 +72,13 @@ public class SomeRepositoryImpl implements SomeRepository {
 
         String query = "SELECT * FROM GUEST WHERE G_NAME = ?";
         jdbcTemplate = new JdbcTemplate(dataSource);
-//        return jdbcTemplate.queryForObject(
-//                query, new Object[]{name}, (rs, rowNum) -> {
-//                    Guest guest = new Guest();
-//                    guest.setId(UUID.fromString(rs.getString("ID")));
-//                    guest.setName(rs.getString("G_NAME"));
-//                    return guest;
-//                });
-                return null;
+        return jdbcTemplate.queryForObject(
+                query, new Object[]{name}, (rs, rowNum) -> {
+                    Guest guest = new Guest();
+                    guest.setId(UUID.fromString(rs.getString("ID")));
+                    guest.setName(rs.getString("G_NAME"));
+                    return guest;
+                });
     }
 
     @Override
